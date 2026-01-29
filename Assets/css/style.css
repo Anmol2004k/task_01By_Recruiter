@@ -1036,10 +1036,38 @@ footer {
     }
 }
 
+.about-hero {
+    position: relative;
+    border-bottom: var(--border-thick) var(--color-navy);
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* lighter overlay to keep text readable */
+    background-color: rgba(11, 28, 45, 0.35);
+}
+
+.about-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 0 var(--spacing-lg);
+}
+
+.about-hero h1,
+.about-hero p,
+.about-hero .hero-content h1,
+.about-hero .hero-content p {
+    color: var(--color-white);
+}
+
 /* ========== UTILITY CLASSES ========== */
 .text-center {
     text-align: center;
-    
+
 }
 
 .text-yellow {
