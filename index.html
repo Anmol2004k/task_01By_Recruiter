@@ -9,10 +9,14 @@
     <meta name="keywords" content="transformers, power solutions, industrial, energy, transformer manufacturer">
     <meta name="author" content="Industrial Power Solutions">
     <title>Industrial Power Solutions | Transformers & Power House Solutions</title>
+    <link rel="shortcut icon" href="./Assets/images/favicon-16x16.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
+    <!-- Font Awesome for industry-standard icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -42,14 +46,98 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Powering Industries with Reliable Transformer Solutions</h1>
-            <p>Engineered Excellence in Power Distribution & Industrial Energy Management</p>
-            <a href="contact.html" class="btn btn-hero">Contact Us Today</a>
+    <!-- HERO SECTION WITH CAROUSEL -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active" style="background-image: url('assets/images/transformer-hero.jpg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <h1>Powering Industries with Reliable Transformer Solutions</h1>
+                    <p>Engineered Excellence in Power Distribution & Industrial Energy Management</p>
+                    <a href="contact.html" class="btn btn-hero">Contact Us Today</a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-slide" style="background-image: url('assets/images/transformer-hero.jpg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <h1>30+ Years of Industrial Power Excellence</h1>
+                    <p>Trusted by Manufacturing Plants, Utilities & Critical Infrastructure Worldwide</p>
+                    <a href="about.html" class="btn btn-hero">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-slide" style="background-image: url('assets/images/transformer-hero.jpg');">
+                <div class="carousel-overlay"></div>
+                <div class="carousel-content">
+                    <h1>Advanced Power Distribution Solutions</h1>
+                    <p>Custom-Engineered Transformers for Every Industrial Application</p>
+                    <a href="services.html" class="btn btn-hero">Explore Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation Buttons -->
+        <button class="carousel-btn carousel-btn-prev" id="prevBtn">&#10094;</button>
+        <button class="carousel-btn carousel-btn-next" id="nextBtn">&#10095;</button>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
         </div>
     </section>
+
+    <!-- FLOATING ACTION ICONS -->
+    <!-- WhatsApp Floating Icon (Font Awesome) -->
+    <a href="https://wa.me/1234567890" target="_blank" class="floating-icon floating-whatsapp"
+        title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span class="sr-only">WhatsApp</span>
+    </a>
+
+    <!-- Small Call Button (tel:) -->
+    <a href="tel:+1234567890" class="floating-icon floating-call" title="Call us">
+        <i class="fas fa-phone" aria-hidden="true"></i>
+        <span class="sr-only">Call</span>
+    </a>
+
+    <!-- Chat/Message Floating Icon (Font Awesome) -->
+    <button class="floating-icon floating-chat" id="chatBtn" title="Send us a message">
+        <i class="fas fa-comment-dots" aria-hidden="true"></i>
+        <span class="sr-only">Chat</span>
+    </button>
+
+    <!-- Chat Modal Popup -->
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-modal-content">
+            <button class="chat-modal-close" id="closeChat">&times;</button>
+            <h3>Send us a Message</h3>
+            <form id="chatForm" class="chat-form">
+                <div class="form-group">
+                    <label for="chatName">Name *</label>
+                    <input type="text" id="chatName" name="name" required>
+                    <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="chatEmail">Email *</label>
+                    <input type="email" id="chatEmail" name="email" required>
+                    <span class="form-error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="chatMessage">Message *</label>
+                    <textarea id="chatMessage" name="message" required></textarea>
+                    <span class="form-error" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+                <div class="chat-success" id="chatSuccess">Thank you! Your message has been received.</div>
+            </form>
+        </div>
+    </div>
 
     <!-- ABOUT INTRODUCTION SECTION -->
     <section class="section">
@@ -266,6 +354,8 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/chat-modal.js"></script>
 </body>
 
 </html>
