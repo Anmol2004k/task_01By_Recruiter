@@ -1030,11 +1030,14 @@ footer {
     }
 
     .floating-chat {
-        right: 70px;
+        right: 70vw;
+        top : auto;
     }
 
     .floating-call {
-        right: 110px;
+        right: 50vw;
+        top : auto;
+
     }
 
     .chat-modal-content {
