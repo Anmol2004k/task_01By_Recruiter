@@ -674,12 +674,20 @@ nav a.active {
     padding: var(--spacing-lg);
     text-align: center;
     background-color: var(--color-grey-light);
+
 }
 
 .feature-box h3 {
     color: var(--color-navy);
     margin-bottom: var(--spacing-md);
 }
+
+.feature-box p {
+    color: #555;
+
+
+}
+
 
 .feature-icon {
     font-size: 2.5rem;
@@ -1080,8 +1088,14 @@ footer {
 /* ========== UTILITY CLASSES ========== */
 .text-center {
     text-align: center;
+    
 
 }
+    .text-center p {
+    color: #555;
+
+    }
+
 
 .text-yellow {
     color: var(--color-yellow-accent);
